@@ -12,6 +12,8 @@
 
 牢 A (Anthropic) 官方 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI 工具的源码反编译/逆向还原项目。目标是将 Claude Code 大部分功能及工程化能力复现 (问就是老佛爷已经付过钱了)。虽然很难绷, 但是它叫做 CCB(踩踩背)... 而且, 我们实现了企业版或者需要登陆 Claude 账号才能使用的特性, 实现技术普惠
 
+> 我们将会在五一期间进行整个代码仓库的 lint 规范化, 这个期间提交的 PR 可能会有非常多的冲突, 所以大的功能请尽量在这之前提交哈
+
 [文档在这里, 支持投稿 PR](https://ccb.agent-aura.top/) | [留影文档在这里](./Friends.md) | [Discord 群组](https://discord.gg/uApuzJWGKX)
 
 
@@ -60,6 +62,41 @@ CLAUDE_BRIDGE_BASE_URL=https://remote-control.claude-code-best.win/ CLAUDE_BRIDG
 一定要最新版本的 bun 啊, 不然一堆奇奇怪怪的 BUG!!! bun upgrade!!!
 
 - 📦 [Bun](https://bun.sh/) >= 1.3.11
+
+**安装 Bun：**
+
+```bash
+# Linux 和 macOS
+curl -fsSL https://bun.sh/install | bash
+
+# Windows (PowerShell)
+powershell -c "irm bun.sh/install.ps1 | iex"
+```
+
+**安装后的操作：**
+
+1. **重启终端** 或重新加载 shell 配置文件：
+   ```bash
+   # macOS/Linux (zsh)
+   source ~/.zshrc
+   
+   # macOS/Linux (bash)
+   source ~/.bashrc
+   
+   # Windows PowerShell
+   # 关闭并重新打开 PowerShell 即可
+   ```
+
+2. **验证安装：**
+   ```bash
+   bun --version
+   ```
+
+3. **更新到最新版本（如果已安装）：**
+   ```bash
+   bun upgrade
+   ```
+
 - ⚙️ 常规的配置 CC 的方式, 各大提供商都有自己的配置方式
 
 ### 📥 安装
